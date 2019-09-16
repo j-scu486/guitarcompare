@@ -34,9 +34,16 @@ h1, h2 {
 }
 
 input, select {
-    width: 70px;
+    width: 100px;
+    padding: 0.25rem 0.25rem;
+    border: 1px solid #ccc;
+    border-radius: 1rem;
     margin: 0;
     box-sizing: border-box;
+}
+
+input, select:focus {
+    outline: none;
 }
 
 input[type="radio"] {
@@ -46,7 +53,7 @@ input[type="radio"] {
 /* Utility Classes */
 
 .brand-container select {
-    width: 70%;
+    width: 80%;
 }
 
 .select-wide {
@@ -135,7 +142,6 @@ input[type="radio"] {
 #main-content .sidebar {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     height: 70vh;
     margin: 5rem 5rem;
     padding: 1rem 1rem;

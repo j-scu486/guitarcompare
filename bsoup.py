@@ -9,7 +9,7 @@ from bs4 import BeautifulSoup
 from entries.models import GuitarInfo
 
 brands = ['FENDER', 'GIBSON', 'GRETSCH', 'SUHR', 'IBANEZ', 'PRS','UNKNOWN','EVH','STRANDBERG','SMITH','SCHECTER', 'TOM', 
-         'TAYLOR', 'MAYONES', 'MUSIC']
+         'TAYLOR', 'MAYONES', 'MUSIC', 'P.R.S']
 
 def handle_entry(model, price, brand, link, img):
         GuitarInfo.objects.is_old().delete()

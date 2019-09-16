@@ -33,7 +33,8 @@ BRAND_CHOICES = [
     ('TAYLOR', 'taylor'),
     ('TOM', 'tom anderson'),
     ('MAYONES', 'mayones'),
-    ('MUSIC', 'music man')
+    ('MUSIC', 'music man'),
+    ('P.R.S', 'P.R.S')
 ]
 
 

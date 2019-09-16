@@ -38,27 +38,27 @@
                     <div class="form-container">
                         <h4>Price from:</h4>
                         <select name="price_from" id="price1" class="mx-1">
-                                <option value="100000">100000</option>
-                                <option value="200000">200000</option>
-                                <option value="300000">300000</option>
-                                <option value="400000">400000</option>
-                                <option value="500000">500000</option>
-                                <option value="600000">600000</option>
-                                <option value="700000">700000</option>
-                                <option value="800000">800000</option>
-                                <option value="900000">900000</option>
+                                <option value="100000">¥100,000</option>
+                                <option value="200000">¥200,000</option>
+                                <option value="300000">¥300,000</option>
+                                <option value="400000">¥400,000</option>
+                                <option value="500000">¥500,000</option>
+                                <option value="600000">¥600,000</option>
+                                <option value="700000">¥700,000</option>
+                                <option value="800000">¥800,000</option>
+                                <option value="900000">¥900,000</option>
                         </select>
                         <h4>Price to:</h4>
                         <select name="price_to" id="price2" class="mx-1">
-                            <option value="100000">100000</option>
-                            <option value="200000">200000</option>
-                            <option value="300000">300000</option>
-                            <option value="400000">400000</option>
-                            <option value="500000">500000</option>
-                            <option value="600000">600000</option>
-                            <option value="700000">700000</option>
-                            <option value="800000">800000</option>
-                            <option value="900000">900000</option>
+                            <option value="100000">¥100,000</option>
+                            <option value="200000">¥200,000</option>
+                            <option value="300000">¥300,000</option>
+                            <option value="400000">¥400,000</option>
+                            <option value="500000">¥500,000</option>
+                            <option value="600000">¥600,000</option>
+                            <option value="700000">¥700,000</option>
+                            <option value="800000">¥800,000</option>
+                            <option value="900000">¥900,000</option>
                         </select>
                     </div>
                     <div class="form-container">
@@ -75,7 +75,7 @@
     </div>
     <div class="container">
         {% if request.GET.q %}
-        {% with gcount=filter|length%}
+        {% with gcount=filter|length %}
         <h2 class="text-center">Found {{ gcount }} {{request.GET.q|title}} guitars in price range ¥{{ request.GET.price_from }} to ¥{{ request.GET.price_to}} </h2>
         {% endwith %}
         <div class="guitarlist">
@@ -100,34 +100,3 @@
  
 </body>
 </html>
-
-   <!-- Logic for  forms -->
-
-    <!-- <form action="" method="GET">
-        <select name="q" id="brand_select">
-            {% for brand in bc %}
-            <option value="{{ brand.0 }}">{{ brand.0 }}</option>
-            {% endfor %}
-        </select>
-        <select name="price_from" id="price1">
-            <option value="100000">100000</option>
-            <option value="200000">200000</option>
-        </select>
-        <select name="price_to" id="price2">
-            <option value="200000">200000</option>
-            <option value="300000">300000</option>
-            <option value="400000">400000</option>
-            <option value="500000">500000</option>
-            <option value="600000">600000</option>
-        </select>
-        <input type="radio" name="price_order" value="price" id="price_asc">
-        <label for="price_asc">Price (Ascending)</label>
-        <input type="radio" name="price_order" value="-price" id="price_dsc">
-        <label for="price_dsc">Price (Decending)</label>
-            <input type="submit" value="Search" />
-        
-    </form>
-    <h2>Showing results for: {{request.GET.q|title}} guitars in price range Y{{ request.GET.price_from }} to Y{{ request.GET.price_to}} </h2>
-    {% for obj in filter %}
-        <p>{{ obj }} ¥{{obj.price}}</p> 
-    {% endfor %} -->
