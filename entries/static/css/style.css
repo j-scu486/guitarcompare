@@ -280,8 +280,20 @@ input[type="radio"] {
         flex-wrap: wrap;
     }
 
+    #main-content .sidebar .form-container {
+        flex-wrap: wrap;
+    }
+
     #main-content .container .guitarlist {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    #footer {
+        text-align: center;
+    }
+
+    .container {
+        text-align: center;
     }
 
     .pagination {
