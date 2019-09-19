@@ -23,7 +23,6 @@ def handle_entry(model, price, brand, link, img):
         )
 
 def ishibashi():
-    
     url = requests.get('https://store.ishibashi.co.jp/ec/srDispCategoryTreeLink/doSearchCategory/11310000000/04-05/2/1').text
 
     soup = BeautifulSoup(url, 'lxml')

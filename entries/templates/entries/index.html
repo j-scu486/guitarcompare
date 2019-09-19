@@ -78,9 +78,8 @@
         {% if request.GET.q %}
         {% with gcount=filter|length %}
         <h2 class="text-center">Found {{ gcount }} {{request.GET.q|title}} guitars in price range ¥{{ request.GET.price_from }} to ¥{{ request.GET.price_to}} </h2>
-        {% endwith %}
         <div class="guitarlist">
-            {% for item in items %}
+            {% for item in filter %}
             <div class="guitar-card">
                 <img src="{{ item.img_link }}" alt="Guitar Image" class="image">
                 <p>{{ item }}</p> 
@@ -88,6 +87,7 @@
                 <a href="{{ item.link }}" class="btn" target="_blank">Visit Site</a>
             </div>
             {% endfor %}
+            {% if gcount > 1 %}
             <div class="pagination">
                 <span class="step-links">
                     {% if items.has_previous %}
@@ -95,13 +95,17 @@
                     <a href="?page{{ items.previous_page_number }}{% for key, value in request.GET.items %}{% if key != 'page' %}&{{ key }}={{ value }}{% endif %}{% endfor %}">previous</a> | 
                     {% endif %}
                     <span class="current">
-                        Page {{ items.number }} of {{ items.paginator.num_pages }} |
+                        Page {{ items.number }} of {{ items.paginator.num_pages }} {% if items.has_next %}|{% endif %}
                     </span>
             
                     {% if items.has_next %}
                         <a href="?page={{ items.next_page_number }}{% for key, value in request.GET.items %}{% if key != 'page' %}&{{ key }}={{ value }}{% endif %}{% endfor %}">next</a>
                         <a href="?page={{ items.paginator.num_pages }}">last &raquo;</a>
                     {% endif %}
+                {% else %}
+                    <p class="no-result text-bold">No results! Try a different search</p>
+                {% endif %}
+                {% endwith %}
                 </span>
             </div>
         </div>

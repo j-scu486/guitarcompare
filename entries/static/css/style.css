@@ -52,6 +52,11 @@ input[type="radio"] {
 
 /* Utility Classes */
 
+.no-result {
+    text-align: center;
+    grid-column: 1 / span 4;
+}
+
 .brand-container select {
     width: 80%;
 }
