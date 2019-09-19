@@ -41,8 +41,6 @@ INSTALLED_APPS = [
     #My apps
     'entries',
 
-    #3rd Party
-    'django_filters',
 ]
 
 MIDDLEWARE = [

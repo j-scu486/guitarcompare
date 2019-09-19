@@ -17,6 +17,9 @@ TAYLOR = 'TLR'
 TOM = 'AND'
 MAYONES = 'MAY'
 MUSIC = 'MUS'
+CHARVEL = 'CHV'
+JACKSON = 'JKN'
+TOKAI = 'TOK'
 
 BRAND_CHOICES = [
     ('FENDER', 'fender'),
@@ -34,7 +37,10 @@ BRAND_CHOICES = [
     ('TOM', 'tom anderson'),
     ('MAYONES', 'mayones'),
     ('MUSIC', 'music man'),
-    ('P.R.S', 'P.R.S')
+    ('P.R.S', 'P.R.S'),
+    ('CHARVEL', 'Charvel'),
+    ('JACKSON', 'Jackson'),
+    ('TOKAI', 'Tokai')
 ]
 
 

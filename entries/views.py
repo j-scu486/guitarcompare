@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.core.paginator import Paginator
 from django.db.models import Q
 from .models import GuitarInfo, BRAND_CHOICES
 
@@ -12,11 +13,16 @@ def index(request):
     price = request.GET.get('price_order')
 
     filtered_results = GuitarInfo.objects.filter(Q(brand_choice=query) & Q(price__range=(price_from, price_to)))
+    
+    paginator = Paginator(filtered_results, 20)
+    page = request.GET.get('page')
+    items = paginator.get_page(page)
 
     if price:
         filtered_results = filtered_results.order_by(price)
 
     return render(request, 'entries/index.html', {'obj_list': obj_list, 
                                                   'filter': filtered_results,
-                                                  'bc': bc
+                                                  'bc': bc,
+                                                  'items': items
                                                   })

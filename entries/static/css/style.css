@@ -218,11 +218,70 @@ input[type="radio"] {
     width: 80%;
 }
 
+/* Pagination */
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    grid-column: 1 / span 4;
+}
+
+.pagination a {
+    color: var(--primary-color);
+}
+
+.pagination a:hover {
+    color: var(--extra-color);
+}
+
 /* Footer */
 
 #footer {
     display: flex;
     justify-content: center;
     height: 15vh;
+    width: 100%;
     background: var(--secondary-color);
+}
+
+/* Media Queries */
+
+@media(max-width: 900px){
+    #navbar {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    #navbar ul {
+        margin: 1rem;
+    }
+    
+    #navbar ul li a {
+        padding: 1rem 1rem;
+    }
+    #main-content{
+        grid-template-columns: 1fr;
+        grid-gap: 0;
+    }
+
+    #main-content .sidebar {
+        margin: 1rem 1rem;
+        flex-wrap: wrap;
+    }
+
+    #main-content .sidebar .form-control {
+        margin: 0;
+        flex-wrap: wrap;
+    }
+
+    #main-content .container .guitarlist {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .pagination {
+        display: flex;
+        justify-content: center;
+        grid-column: 1;
+    }
+
 }
