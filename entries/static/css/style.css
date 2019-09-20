@@ -254,6 +254,7 @@ input[type="radio"] {
 
 @media(max-width: 900px){
     #navbar {
+        position: static;
         flex-wrap: wrap;
         justify-content: center;
     }
@@ -269,7 +270,6 @@ input[type="radio"] {
         grid-template-columns: 1fr;
         grid-gap: 0;
     }
-
     #main-content .sidebar {
         height: auto;
         margin: 1rem 1rem;
@@ -280,10 +280,18 @@ input[type="radio"] {
         margin: 0;
         flex-wrap: wrap;
     }
-
-    #main-content .sidebar .form-container {
+    #main-content .sidebar .form-control .form-container {
+        padding: 0;
+        flex-direction: column;
         flex-wrap: wrap;
     }
+
+    #main-content .sidebar .form-container select {
+        width: 100%;
+        margin: 0.5rem;
+        padding: 0.5rem;
+    }
+    
 
     #main-content .container .guitarlist {
         grid-template-columns: repeat(2, 1fr);
@@ -300,7 +308,31 @@ input[type="radio"] {
     .pagination {
         display: flex;
         justify-content: center;
-        grid-column: 1;
+        grid-column: 1 / span 2;
+    }
+}
+
+@media(max-width: 440px){
+
+    #main-content .sidebar {
+        height: auto;
+        margin: 1rem 1rem;
+        flex-wrap: wrap;
     }
 
+    #main-content .sidebar .form-control {
+        margin: 0;
+        flex-wrap: wrap;
+    }
+    #main-content .sidebar .form-control .form-container {
+        padding: 0;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    #main-content .sidebar .form-container select {
+        width: 100%;
+        margin: 0.5rem;
+        padding: 0.5rem;
+    }
 }
