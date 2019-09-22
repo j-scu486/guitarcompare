@@ -8,10 +8,10 @@ django.setup()
 from bs4 import BeautifulSoup
 from entries.models import GuitarInfo
 
-brands = ['FENDER', 'GIBSON', 'GRETSCH', 'SUHR', 'IBANEZ', 'PRS','UNKNOWN','EVH','STRANDBERG','SMITH','SCHECTER', 'TOM', 
-         'TAYLOR', 'MAYONES', 'MUSIC', 'P.R.S', 'CHARVEL', 'JACKSON', 'TOKAI']
+brands = ['FENDER', 'GIBSON', 'GRETSCH', 'SUHR', 'IBANEZ','UNKNOWN','EVH','STRANDBERG','SMITH','SCHECTER', 'TOM', 
+         'TAYLOR', 'MAYONES', 'MUSIC','CHARVEL', 'JACKSON', 'TOKAI']
 
-prs = ['PRS', 'PAUL REED SMITH', 'PAUL REED SMITH(PRS)', 'P.R.S.']
+prs = ['PRS', 'REED', 'SMITH(PRS)', 'P.R.S.']
 
 def handle_entry(model, price, brand, link, img):
         GuitarInfo.objects.is_old().delete()

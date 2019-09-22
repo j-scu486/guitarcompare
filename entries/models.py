@@ -11,7 +11,6 @@ PRS = 'PRS'
 UNKNOWN = 'UKN'
 EVH = 'EVH'
 STRANDBERG = 'SBG'
-SMITH = 'PRS'
 SCHECTER = 'SHR'
 TAYLOR = 'TLR'
 TOM = 'AND'
@@ -37,7 +36,6 @@ BRAND_CHOICES = [
     ('TOM', 'tom anderson'),
     ('MAYONES', 'mayones'),
     ('MUSIC', 'music man'),
-    ('P.R.S', 'P.R.S'),
     ('CHARVEL', 'Charvel'),
     ('JACKSON', 'Jackson'),
     ('TOKAI', 'Tokai')
