@@ -1,0 +1,47 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{% static "css/style.css" %}">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <title>g-compare TOKYO</title>
+</head>
+
+<body>
+    <div class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h1 class="text-center">About this site</h1>
+            <p>This site scrapes data from several large guitar retailers in the Tokyo region.</p>
+            <p>Guitars are updated daily, so be sure to check back for the latest deals.</p>
+            <p>This site was created by Joseph Scutella as a demonstration project. If you would like
+                me to create something similar for your website, please feel free to contact me via the contact link!
+            </p>
+        </div>
+    </div>
+    <!-- NavBar -->
+    <nav id="navbar">
+        <img src="{% static "img/logo2.png" %}" class="logo" alt="gcompareLogo">
+        <ul>
+            <li><a href="{% url 'index' %}">Home</a></li>
+            <li><a href="#" class="trigger">About</a></li>
+            <li><a href="mailto:joseph.scutella486@gmail.com?subject=Website Inquiry">Contact</a></li>
+        </ul>
+    </nav>
+    {% block content %}
+
+    {% endblock %}
+    <!-- Footer  -->
+
+    <footer id="footer">
+        <h2 class="text-white mt-2">&copy; Copyright 2019 Joseph Scutella</h2>
+    </footer>
+
+<script src="{% static "js/javascript.js" %}"></script>
+ 
+</body>
+</html>
