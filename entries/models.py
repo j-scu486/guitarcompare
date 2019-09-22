@@ -30,7 +30,6 @@ BRAND_CHOICES = [
     ('UNKNOWN', 'unknown'),
     ('STRANDBERG', 'strandberg'),
     ('EVH', 'EVH'),
-    ('SMITH', 'Paul Reed Smith'),
     ('SCHECTER', 'schecter'),
     ('TAYLOR', 'taylor'),
     ('TOM', 'tom anderson'),
