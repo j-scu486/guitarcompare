@@ -11,6 +11,8 @@ from entries.models import GuitarInfo
 brands = ['FENDER', 'GIBSON', 'GRETSCH', 'SUHR', 'IBANEZ', 'PRS','UNKNOWN','EVH','STRANDBERG','SMITH','SCHECTER', 'TOM', 
          'TAYLOR', 'MAYONES', 'MUSIC', 'P.R.S', 'CHARVEL', 'JACKSON', 'TOKAI']
 
+prs = ['PRS', 'PAUL REED SMITH', 'PAUL REED SMITH(PRS)', 'P.R.S.']
+
 def handle_entry(model, price, brand, link, img):
         GuitarInfo.objects.is_old().delete()
 
@@ -38,6 +40,8 @@ def ishibashi():
 
         guitar_brand = result.a.text.split()
         for guitar in guitar_brand:
+            if guitar.upper() in prs:
+                brand = 'PRS'
             if guitar.upper() in brands:
                 brand = guitar.upper()
 
@@ -59,6 +63,8 @@ def ikebe():
 
         guitar_brand = result.a.text.split()
         for guitar in guitar_brand:
+            if guitar.upper() in prs:
+                brand = 'PRS'
             if guitar.upper() in brands:
                 brand = guitar.upper()
 
@@ -82,6 +88,8 @@ def digimart():
 
         guitar_brand = model.split()
         for guitar in guitar_brand:
+            if guitar.upper() in prs:
+                brand = 'PRS'
             if guitar.upper() in brands:
                 brand = guitar.upper()
         
